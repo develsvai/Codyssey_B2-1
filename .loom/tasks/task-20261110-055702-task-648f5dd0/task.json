@@ -3,11 +3,11 @@
   "job_id": "job-20261110-055623-job-4a2fedd3",
   "title": "거래 추가·수정·삭제·스트리밍 목록·검색 구현",
   "description": "거래 서비스에서 카테고리와 입력을 검증하고 ID 기반 변경, 최신순 조회 및 모든 검색 조건을 지원한다.",
-  "status": "PENDING",
+  "status": "RUNNING",
   "created_at": "2026-11-10T05:57:02+00:00",
-  "updated_at": "2026-11-10T05:57:02+00:00",
+  "updated_at": "2026-11-10T06:03:52+00:00",
   "order_index": 4,
-  "assigned_agent": "",
+  "assigned_agent": "codex",
   "depends_on": [
     "task-20261110-055702-task-4e623a4c"
   ],
@@ -22,10 +22,12 @@
   "document_output_exceptions": [],
   "run_attempts": 0,
   "last_error": "",
-  "commit_refs": [],
-  "branch_name": "",
-  "git_dirty": false,
-  "git_snapshot_captured_at": "",
+  "commit_refs": [
+    "b94b09754cfd92147c6ebaf1423555c5ddb7a9da"
+  ],
+  "branch_name": "develop",
+  "git_dirty": true,
+  "git_snapshot_captured_at": "2026-11-10T06:03:52+00:00",
   "artifacts": [],
   "source_proposal_id": "",
   "source_prompt": ""
