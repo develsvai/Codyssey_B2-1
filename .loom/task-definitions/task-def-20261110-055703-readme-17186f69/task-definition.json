@@ -1,0 +1,28 @@
+{
+  "id": "task-def-20261110-055703-readme-17186f69",
+  "job_definition_id": "job-20261110-055623-job-4a2fedd3",
+  "title": "통합 검증·의존성 검사·README 완성",
+  "description": "미션 시나리오와 하향 import/순환/CLI I/O 경계를 검증하고 필요한 결함을 수정한다. 실행/저장/CSV/구조를 README에 문서화한다.",
+  "created_at": "2026-11-10T05:57:03+00:00",
+  "updated_at": "2026-11-10T05:57:03+00:00",
+  "order_index": 9,
+  "legacy_task_id": "task-20261110-055703-readme-02037e2f",
+  "depends_on": [
+    "task-def-20261110-055703-cli-9081931e"
+  ],
+  "expected_output": "통합·아키텍처 테스트, README.md, 검증 기록",
+  "done_condition": "전체 unittest와 의존성 검사, CLI 실제 실행, Loom strict 검증 통과",
+  "in_scope": "필수 기능의 통합 검증과 결함 수정, 문서",
+  "out_of_scope": "추가 기능·외부 라이브러리·선택 과제",
+  "validation_hint": "python3 -m unittest discover -v; loom validate --strict",
+  "required_docs": [],
+  "memory_refs": [],
+  "document_outputs": [],
+  "document_output_exceptions": [],
+  "default_agent": "",
+  "context_policy_id": "",
+  "executor_policy_id": "",
+  "review_policy": "",
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

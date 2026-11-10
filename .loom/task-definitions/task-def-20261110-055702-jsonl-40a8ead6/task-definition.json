@@ -1,0 +1,28 @@
+{
+  "id": "task-def-20261110-055702-jsonl-40a8ead6",
+  "job_definition_id": "job-20261110-055623-job-4a2fedd3",
+  "title": "스트리밍 JSONL 저장소와 안전한 파일 교체 구현",
+  "description": "거래·카테고리·예산 저장소 및 공통 JSONL/원자적 교체를 구현한다. 거래는 날짜 내림차순으로 유지하고 변경 실패 시 원본을 보존한다.",
+  "created_at": "2026-11-10T05:57:02+00:00",
+  "updated_at": "2026-11-10T05:57:02+00:00",
+  "order_index": 2,
+  "legacy_task_id": "task-20261110-055702-jsonl-26e90fe2",
+  "depends_on": [
+    "task-def-20261110-055702-task-def-ea1d39dc"
+  ],
+  "expected_output": "infrastructure 저장소, 파일 I/O, 저장소 테스트",
+  "done_condition": "3개 JSONL 영구 저장, 최신순 스트리밍, 수정·삭제·쓰기 실패 보존 검증 통과",
+  "in_scope": "파일 I/O와 저장소, 초기화, 동시 쓰기 보호",
+  "out_of_scope": "업무 서비스 및 CLI",
+  "validation_hint": "python3 -m unittest tests.test_repositories -v",
+  "required_docs": [],
+  "memory_refs": [],
+  "document_outputs": [],
+  "document_output_exceptions": [],
+  "default_agent": "",
+  "context_policy_id": "",
+  "executor_policy_id": "",
+  "review_policy": "",
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

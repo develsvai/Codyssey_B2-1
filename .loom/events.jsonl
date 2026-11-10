@@ -1,0 +1,10 @@
+{"created_at": "2026-11-10T05:56:23+00:00", "data": {}, "job_id": "job-20261110-055623-job-4a2fedd3", "message": "콘솔 용돈 기입장 구현", "task_id": "", "type": "JOB_CREATED"}
+{"created_at": "2026-11-10T05:57:02+00:00", "data": {}, "job_id": "job-20261110-055623-job-4a2fedd3", "message": "설계·모델·공통 관심사 기반 구현", "task_id": "task-20261110-055702-task-f41f2d6d", "type": "TASK_CREATED"}
+{"created_at": "2026-11-10T05:57:02+00:00", "data": {}, "job_id": "job-20261110-055623-job-4a2fedd3", "message": "스트리밍 JSONL 저장소와 안전한 파일 교체 구현", "task_id": "task-20261110-055702-jsonl-26e90fe2", "type": "TASK_CREATED"}
+{"created_at": "2026-11-10T05:57:02+00:00", "data": {}, "job_id": "job-20261110-055623-job-4a2fedd3", "message": "카테고리 추가·조회·사용 중 삭제 방지 구현", "task_id": "task-20261110-055702-task-4e623a4c", "type": "TASK_CREATED"}
+{"created_at": "2026-11-10T05:57:02+00:00", "data": {}, "job_id": "job-20261110-055623-job-4a2fedd3", "message": "거래 추가·수정·삭제·스트리밍 목록·검색 구현", "task_id": "task-20261110-055702-task-648f5dd0", "type": "TASK_CREATED"}
+{"created_at": "2026-11-10T05:57:02+00:00", "data": {}, "job_id": "job-20261110-055623-job-4a2fedd3", "message": "월 예산 설정·조회 구현", "task_id": "task-20261110-055702-task-20e982db", "type": "TASK_CREATED"}
+{"created_at": "2026-11-10T05:57:03+00:00", "data": {}, "job_id": "job-20261110-055623-job-4a2fedd3", "message": "월별 요약·지출 순위·예산 초과 판정 구현", "task_id": "task-20261110-055703-task-ce6b1801", "type": "TASK_CREATED"}
+{"created_at": "2026-11-10T05:57:03+00:00", "data": {}, "job_id": "job-20261110-055623-job-4a2fedd3", "message": "CSV 가져오기·조건별 내보내기 구현", "task_id": "task-20261110-055703-csv-deaec22d", "type": "TASK_CREATED"}
+{"created_at": "2026-11-10T05:57:03+00:00", "data": {}, "job_id": "job-20261110-055623-job-4a2fedd3", "message": "기능별 CLI 명령과 공통 입력·출력·오류 처리 구현", "task_id": "task-20261110-055703-cli-71ecac94", "type": "TASK_CREATED"}
+{"created_at": "2026-11-10T05:57:03+00:00", "data": {}, "job_id": "job-20261110-055623-job-4a2fedd3", "message": "통합 검증·의존성 검사·README 완성", "task_id": "task-20261110-055703-readme-02037e2f", "type": "TASK_CREATED"}
