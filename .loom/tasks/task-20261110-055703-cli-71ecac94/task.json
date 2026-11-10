@@ -3,11 +3,11 @@
   "job_id": "job-20261110-055623-job-4a2fedd3",
   "title": "기능별 CLI 명령과 공통 입력·출력·오류 처리 구현",
   "description": "객체 연결을 진입점에 두고 기능별 명령, 대화형 add/category, 옵션 update, help와 data-dir, 친절한 오류/종료 코드를 구현한다.",
-  "status": "PENDING",
+  "status": "RUNNING",
   "created_at": "2026-11-10T05:57:03+00:00",
-  "updated_at": "2026-11-10T05:57:03+00:00",
+  "updated_at": "2026-11-10T06:09:18+00:00",
   "order_index": 8,
-  "assigned_agent": "",
+  "assigned_agent": "codex",
   "depends_on": [
     "task-20261110-055703-csv-deaec22d"
   ],
@@ -22,10 +22,12 @@
   "document_output_exceptions": [],
   "run_attempts": 0,
   "last_error": "",
-  "commit_refs": [],
-  "branch_name": "",
-  "git_dirty": false,
-  "git_snapshot_captured_at": "",
+  "commit_refs": [
+    "62759a5eae461800e492a5dcdbe56b2b730444e6"
+  ],
+  "branch_name": "develop",
+  "git_dirty": true,
+  "git_snapshot_captured_at": "2026-11-10T06:09:18+00:00",
   "artifacts": [],
   "source_proposal_id": "",
   "source_prompt": ""
