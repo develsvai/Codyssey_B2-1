@@ -1,0 +1,19 @@
+{
+  "id": "checkpoint-20261110-060043-task-completed-2bc8a782",
+  "created_at": "2026-11-10T06:00:43+00:00",
+  "reason": "Task completed: 설계·모델·공통 관심사 기반 구현",
+  "summary": "설계·모델·공통 관심사 기반 구현 -> DONE @ develop/2e0d47b60877",
+  "job_id": "job-20261110-055623-job-4a2fedd3",
+  "task_id": "task-20261110-055702-task-f41f2d6d",
+  "commit_sha": "2e0d47b60877f19bca27d16bee379a23b6729877",
+  "branch_name": "develop",
+  "dirty": true,
+  "staged_files": [],
+  "modified_files": [
+    ".loom/job-runs/job-run-20261110-055813-job-20261110-055623-job-4a2fedd3-6d700c64/job-run.json",
+    ".loom/task-definitions/task-def-20261110-055702-task-def-ea1d39dc/task-definition.json"
+  ],
+  "untracked_files": [],
+  "snapshot_captured_at": "2026-11-10T06:00:43+00:00",
+  "rollback_strategy": "revert-or-branch"
+}
