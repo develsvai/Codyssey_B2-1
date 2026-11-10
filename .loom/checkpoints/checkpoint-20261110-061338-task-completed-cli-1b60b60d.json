@@ -1,0 +1,19 @@
+{
+  "id": "checkpoint-20261110-061338-task-completed-cli-1b60b60d",
+  "created_at": "2026-11-10T06:13:38+00:00",
+  "reason": "Task completed: 기능별 CLI 명령과 공통 입력·출력·오류 처리 구현",
+  "summary": "기능별 CLI 명령과 공통 입력·출력·오류 처리 구현 -> DONE @ develop/073c34edd247",
+  "job_id": "job-20261110-055623-job-4a2fedd3",
+  "task_id": "task-20261110-055703-cli-71ecac94",
+  "commit_sha": "073c34edd247afaf03563d0579b975c47a768c1e",
+  "branch_name": "develop",
+  "dirty": true,
+  "staged_files": [],
+  "modified_files": [
+    ".loom/job-runs/job-run-20261110-055813-job-20261110-055623-job-4a2fedd3-6d700c64/job-run.json",
+    ".loom/task-definitions/task-def-20261110-055703-cli-9081931e/task-definition.json"
+  ],
+  "untracked_files": [],
+  "snapshot_captured_at": "2026-11-10T06:13:38+00:00",
+  "rollback_strategy": "revert-or-branch"
+}

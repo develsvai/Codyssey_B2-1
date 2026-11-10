@@ -1,1 +1,2 @@
 [2026-11-10T06:09:18+00:00] agent=codex task=task-20261110-055703-cli-71ecac94 Foreground task session started.
+[2026-11-10T06:13:38+00:00] agent=codex task=task-20261110-055703-cli-71ecac94 기능별 CLI, 대화형 추가, 옵션 수정, 공통 출력·재입력·오류 처리와 진입점 조립 구현. 산출물: budget_app/cli, __main__.py, tests/test_cli.py. 검증: python3 -m unittest tests.test_cli -v 10개 통과.
