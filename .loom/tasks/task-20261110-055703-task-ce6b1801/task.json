@@ -3,11 +3,11 @@
   "job_id": "job-20261110-055623-job-4a2fedd3",
   "title": "월별 요약·지출 순위·예산 초과 판정 구현",
   "description": "거래와 예산 저장소를 사용해 스트리밍 월별 합산, 카테고리 TOP N, 사용률과 초과 여부를 반환한다.",
-  "status": "PENDING",
+  "status": "RUNNING",
   "created_at": "2026-11-10T05:57:03+00:00",
-  "updated_at": "2026-11-10T05:57:03+00:00",
+  "updated_at": "2026-11-10T06:05:42+00:00",
   "order_index": 6,
-  "assigned_agent": "",
+  "assigned_agent": "codex",
   "depends_on": [
     "task-20261110-055702-task-20e982db"
   ],
@@ -22,10 +22,12 @@
   "document_output_exceptions": [],
   "run_attempts": 0,
   "last_error": "",
-  "commit_refs": [],
-  "branch_name": "",
-  "git_dirty": false,
-  "git_snapshot_captured_at": "",
+  "commit_refs": [
+    "737efcc9cf6426740db65a11b33e25ebf87e3580"
+  ],
+  "branch_name": "develop",
+  "git_dirty": true,
+  "git_snapshot_captured_at": "2026-11-10T06:05:42+00:00",
   "artifacts": [],
   "source_proposal_id": "",
   "source_prompt": ""
