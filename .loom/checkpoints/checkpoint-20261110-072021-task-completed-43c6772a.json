@@ -1,0 +1,19 @@
+{
+  "id": "checkpoint-20261110-072021-task-completed-43c6772a",
+  "created_at": "2026-11-10T07:20:21+00:00",
+  "reason": "Task completed: 미션 원문 대비 필수 조건 재점검",
+  "summary": "미션 원문 대비 필수 조건 재점검 -> DONE @ develop/b3428e98f536",
+  "job_id": "job-20261110-055623-job-4a2fedd3",
+  "task_id": "task-20261110-071438-task-cf1d4e5b",
+  "commit_sha": "b3428e98f536a4692252f6c03466d00361b2d845",
+  "branch_name": "develop",
+  "dirty": true,
+  "staged_files": [],
+  "modified_files": [
+    ".loom/job-runs/job-run-20261110-071438-job-20261110-055623-job-4a2fedd3-32b3370c/job-run.json",
+    ".loom/task-definitions/task-def-20261110-071438-task-def-11bc7b6a/task-definition.json"
+  ],
+  "untracked_files": [],
+  "snapshot_captured_at": "2026-11-10T07:20:21+00:00",
+  "rollback_strategy": "revert-or-branch"
+}
