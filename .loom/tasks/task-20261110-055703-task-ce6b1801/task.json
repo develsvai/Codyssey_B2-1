@@ -3,9 +3,9 @@
   "job_id": "job-20261110-055623-job-4a2fedd3",
   "title": "월별 요약·지출 순위·예산 초과 판정 구현",
   "description": "거래와 예산 저장소를 사용해 스트리밍 월별 합산, 카테고리 TOP N, 사용률과 초과 여부를 반환한다.",
-  "status": "RUNNING",
+  "status": "DONE",
   "created_at": "2026-11-10T05:57:03+00:00",
-  "updated_at": "2026-11-10T06:05:42+00:00",
+  "updated_at": "2026-11-10T06:06:35+00:00",
   "order_index": 6,
   "assigned_agent": "codex",
   "depends_on": [
@@ -23,12 +23,24 @@
   "run_attempts": 0,
   "last_error": "",
   "commit_refs": [
-    "737efcc9cf6426740db65a11b33e25ebf87e3580"
+    "737efcc9cf6426740db65a11b33e25ebf87e3580",
+    "c1dba63dcf14e89e707cb1c5daa531f8a1c98724"
   ],
   "branch_name": "develop",
   "git_dirty": true,
-  "git_snapshot_captured_at": "2026-11-10T06:05:42+00:00",
-  "artifacts": [],
+  "git_snapshot_captured_at": "2026-11-10T06:06:35+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20261110-055703-task-ce6b1801/agent-events.jsonl",
+    ".loom/tasks/task-20261110-055703-task-ce6b1801/artifacts.json",
+    ".loom/tasks/task-20261110-055703-task-ce6b1801/context.md",
+    ".loom/tasks/task-20261110-055703-task-ce6b1801/decision.md",
+    ".loom/tasks/task-20261110-055703-task-ce6b1801/git-snapshot.json",
+    ".loom/tasks/task-20261110-055703-task-ce6b1801/logs.txt",
+    ".loom/tasks/task-20261110-055703-task-ce6b1801/previous-results.md",
+    ".loom/tasks/task-20261110-055703-task-ce6b1801/prompt.md",
+    ".loom/tasks/task-20261110-055703-task-ce6b1801/result.md",
+    ".loom/tasks/task-20261110-055703-task-ce6b1801/troubleshooting.md"
+  ],
   "source_proposal_id": "",
   "source_prompt": ""
 }

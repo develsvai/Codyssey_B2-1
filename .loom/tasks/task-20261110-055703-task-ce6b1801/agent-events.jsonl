@@ -1,1 +1,2 @@
 {"id": "event-2d66f81c440c", "type": "foreground_session_started", "message": "Foreground task session started.", "created_at": "2026-11-10T06:05:42+00:00", "agent": "codex", "task_id": "task-20261110-055703-task-ce6b1801"}
+{"id": "event-e0dc8383caa5", "type": "foreground_session_done", "message": "월별 수입·지출·잔액·카테고리 TOP N·예산 사용률과 초과 판정 구현. 산출물: services/reports.py, domain/reports.py, tests/test_reports.py. 검증: python3 -m unittest tests.test_reports -v 5개 통과.", "created_at": "2026-11-10T06:06:35+00:00", "agent": "codex", "task_id": "task-20261110-055703-task-ce6b1801"}
