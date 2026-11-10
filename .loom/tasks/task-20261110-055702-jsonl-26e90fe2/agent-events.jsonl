@@ -1,1 +1,2 @@
 {"id": "event-e22359931801", "type": "foreground_session_started", "message": "Foreground task session started.", "created_at": "2026-11-10T06:00:53+00:00", "agent": "codex", "task_id": "task-20261110-055702-jsonl-26e90fe2"}
+{"id": "event-7172e2cf95da", "type": "foreground_session_done", "message": "JSONL 3종 저장소, 최신순 스트리밍, 원자적 교체와 쓰기 잠금 구현. 산출물: budget_app/infrastructure, tests/test_repositories.py. 검증: python3 -m unittest tests.test_repositories -v 9개 통과.", "created_at": "2026-11-10T06:03:09+00:00", "agent": "codex", "task_id": "task-20261110-055702-jsonl-26e90fe2"}
