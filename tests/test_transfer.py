@@ -1,8 +1,9 @@
 import csv
 from dataclasses import replace
+from types import SimpleNamespace
 from unittest.mock import patch
 
-from budget_app.common.errors import StorageError, ValidationError
+from budget_app.common.errors import ConflictError, StorageError, ValidationError
 from budget_app.services.transfer import TransferService
 from tests.support import StoreCase
 
@@ -103,3 +104,30 @@ class TransferTests(StoreCase):
         self.csv_path.write_bytes(b'\xff\xfe')
         with self.assertRaises(StorageError):
             self.service.import_csv(self.csv_path)
+
+    def test_large_memo_roundtrip(self):
+        memo = '긴 메모' * 40000
+        self.seed(self.transaction(memo=memo))
+        self.service.export_csv(self.csv_path, month='2024-01')
+        self.assertEqual(self.service.import_csv(self.csv_path), 1)
+        self.assertTrue(all(t.memo == memo for t in self.transactions.iter_all()))
+
+    def test_export_cannot_overwrite_symlinked_storage_target(self):
+        self.seed(self.transaction())
+        backing = self.root / 'backing.jsonl'
+        self.transactions.path.replace(backing)
+        self.transactions.path.symlink_to(backing)
+        before = backing.read_bytes()
+        with self.assertRaises(ValidationError):
+            self.service.export_csv(backing, month='2024-01')
+        self.assertEqual(backing.read_bytes(), before)
+
+    def test_import_id_collision_never_creates_duplicate_ids(self):
+        self.write('date,type,category,amount\n2024-01-01,expense,food,1\n')
+        with patch('budget_app.services.transfer.uuid4', return_value=SimpleNamespace(hex='same-batch')):
+            self.service.import_csv(self.csv_path)
+            before = self.transactions.path.read_bytes()
+            self.write('date,type,category,amount\n2024-02-01,expense,food,1\n')
+            with self.assertRaises(ConflictError):
+                self.service.import_csv(self.csv_path)
+            self.assertEqual(self.transactions.path.read_bytes(), before)

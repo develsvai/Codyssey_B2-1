@@ -3,11 +3,11 @@
   "job_id": "job-20261110-055623-job-4a2fedd3",
   "title": "통합 검증·의존성 검사·README 완성",
   "description": "미션 시나리오와 하향 import/순환/CLI I/O 경계를 검증하고 필요한 결함을 수정한다. 실행/저장/CSV/구조를 README에 문서화한다.",
-  "status": "PENDING",
+  "status": "RUNNING",
   "created_at": "2026-11-10T05:57:03+00:00",
-  "updated_at": "2026-11-10T05:57:03+00:00",
+  "updated_at": "2026-11-10T06:13:44+00:00",
   "order_index": 9,
-  "assigned_agent": "",
+  "assigned_agent": "codex",
   "depends_on": [
     "task-20261110-055703-cli-71ecac94"
   ],
@@ -22,10 +22,12 @@
   "document_output_exceptions": [],
   "run_attempts": 0,
   "last_error": "",
-  "commit_refs": [],
-  "branch_name": "",
-  "git_dirty": false,
-  "git_snapshot_captured_at": "",
+  "commit_refs": [
+    "2515bd61545b87f3350f5b5f6b0bface820f34f5"
+  ],
+  "branch_name": "develop",
+  "git_dirty": true,
+  "git_snapshot_captured_at": "2026-11-10T06:13:44+00:00",
   "artifacts": [],
   "source_proposal_id": "",
   "source_prompt": ""

@@ -1,6 +1,7 @@
 """CSV 표현과 파일 처리만 담당한다. 업무 검증은 서비스에서 수행한다."""
 
 import csv
+import sys
 from pathlib import Path
 from typing import Iterable, Iterator
 
@@ -13,6 +14,9 @@ REQUIRED_FIELDS = frozenset(CSV_FIELDS[:4])
 
 
 def read_csv(path: Path) -> Iterator[tuple[int, dict[str, str]]]:
+    # 앱이 내보낸 긴 메모도 다시 읽을 수 있도록 기본 128 KiB 제한을 해제한다.
+    previous_limit = csv.field_size_limit()
+    csv.field_size_limit(sys.maxsize)
     try:
         with path.open(encoding='utf-8-sig', newline='') as stream:
             reader = csv.DictReader(stream, strict=True)
@@ -28,6 +32,8 @@ def read_csv(path: Path) -> Iterator[tuple[int, dict[str, str]]]:
         raise ValidationError(f'CSV 형식 오류: {path} ({exc})', '따옴표·쉼표와 필드 크기를 확인하세요.') from exc
     except (OSError, UnicodeError) as exc:
         raise StorageError(f'CSV 읽기 실패: {path} ({exc})', '경로·권한과 UTF-8 인코딩을 확인하세요.') from exc
+    finally:
+        csv.field_size_limit(previous_limit)
 
 
 def write_csv(path: Path, transactions: Iterable[Transaction]) -> int:

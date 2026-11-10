@@ -7,7 +7,7 @@ from typing import Iterator
 from uuid import uuid4
 
 from budget_app.common.decorators import timed
-from budget_app.common.errors import ValidationError
+from budget_app.common.errors import ConflictError, ValidationError
 from budget_app.domain.models import Transaction
 from budget_app.domain.queries import TransactionFilter
 from budget_app.domain.validation import parse_tags, positive_int, registered_category, valid_month
@@ -27,6 +27,9 @@ class TransferService:
         with self.transactions.store.write_lock():
             categories = set(self.categories.list_all())
             batch = uuid4().hex
+            with closing(self.transactions.iter_all()) as existing:
+                if any(transaction.id.startswith(f'TX-{batch}-') for transaction in existing):
+                    raise ConflictError('가져오기 ID가 기존 거래와 충돌합니다.', '새 ID를 생성하도록 가져오기를 다시 실행하세요.')
             def validated() -> Iterator[Transaction]:
                 with closing(read_csv(path)) as rows:
                     for index, (number, row) in enumerate(rows, 1):
@@ -55,8 +58,8 @@ class TransferService:
         query = TransactionFilter(start=start, end=end)
         path = Path(destination).expanduser().resolve()
         store = self.transactions.store
-        protected = {store.path(name) for name in ('transactions', 'categories', 'budgets')}
-        protected.add(store.root / '.write.lock')
+        protected = {store.path(name).resolve() for name in ('transactions', 'categories', 'budgets')}
+        protected.add((store.root / '.write.lock').resolve())
         if path in protected:
             raise ValidationError('저장 파일을 CSV로 덮어쓸 수 없습니다.', '별도의 .csv 출력 경로를 지정하세요.')
         with closing(self.transactions.iter_all()) as transactions:
