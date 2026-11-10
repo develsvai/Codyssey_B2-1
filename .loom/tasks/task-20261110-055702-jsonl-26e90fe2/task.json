@@ -3,11 +3,11 @@
   "job_id": "job-20261110-055623-job-4a2fedd3",
   "title": "스트리밍 JSONL 저장소와 안전한 파일 교체 구현",
   "description": "거래·카테고리·예산 저장소 및 공통 JSONL/원자적 교체를 구현한다. 거래는 날짜 내림차순으로 유지하고 변경 실패 시 원본을 보존한다.",
-  "status": "PENDING",
+  "status": "RUNNING",
   "created_at": "2026-11-10T05:57:02+00:00",
-  "updated_at": "2026-11-10T05:57:02+00:00",
+  "updated_at": "2026-11-10T06:00:53+00:00",
   "order_index": 2,
-  "assigned_agent": "",
+  "assigned_agent": "codex",
   "depends_on": [
     "task-20261110-055702-task-f41f2d6d"
   ],
@@ -22,10 +22,12 @@
   "document_output_exceptions": [],
   "run_attempts": 0,
   "last_error": "",
-  "commit_refs": [],
-  "branch_name": "",
-  "git_dirty": false,
-  "git_snapshot_captured_at": "",
+  "commit_refs": [
+    "54d3cf81363c21558875495885be72c517d3f04c"
+  ],
+  "branch_name": "develop",
+  "git_dirty": true,
+  "git_snapshot_captured_at": "2026-11-10T06:00:53+00:00",
   "artifacts": [],
   "source_proposal_id": "",
   "source_prompt": ""
