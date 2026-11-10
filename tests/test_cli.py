@@ -1,3 +1,4 @@
+import csv
 import json
 import re
 import subprocess
@@ -87,6 +88,23 @@ class CLITests(unittest.TestCase):
         result = self.run_cli('import', '--from', str(csv_path))
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertIn('imported=1', result.stdout)
+
+    def test_export_combined_conditions(self):
+        for day in ('2024-01-01', '2024-01-15', '2024-02-01'):
+            self.add(day=day)
+        csv_path = self.root / 'intersection.csv'
+        result = self.run_cli('export', '--out', str(csv_path), '--month', '2024-01',
+                              '--from', '2024-01-15', '--to', '2024-02-01')
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn('1 records', result.stdout)
+        with csv_path.open(encoding='utf-8', newline='') as stream:
+            self.assertEqual([row['date'] for row in csv.DictReader(stream)], ['2024-01-15'])
+        result = self.run_cli('export', '--out', str(csv_path), '--month', '2024-01',
+                              '--from', '2024-02-01', '--to', '2024-02-29')
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn('0 records', result.stdout)
+        self.assertEqual(len(csv_path.read_text().splitlines()), 1)
+        self.assertIn('교집합', self.run_cli('export', '--help').stdout)
 
     def test_invalid_arguments_errors_and_no_traceback(self):
         for args in [(), ('unknown',), ('list', '--limit', '0'), ('delete',), ('delete', '--id', 'missing'),

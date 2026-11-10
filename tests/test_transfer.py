@@ -73,7 +73,51 @@ class TransferTests(StoreCase):
         self.assertEqual(self.service.export_csv(self.csv_path, month='2024-03'), 0)
         self.assertEqual(len(self.csv_path.read_text().splitlines()), 1)
 
-    def test_export_requires_one_complete_condition(self):
+    def test_export_intersection_filters_boundaries(self):
+        self.seed(self.transaction('A', '2024-01-01'), self.transaction('B', '2024-01-10'),
+                  self.transaction('C', '2024-01-20'), self.transaction('D', '2024-01-31'),
+                  self.transaction('E', '2024-02-01'))
+        cases = [
+            ('2024-01-10', '2024-01-20', ['2024-01-20', '2024-01-10']),
+            ('2023-12-01', '2024-01-10', ['2024-01-10', '2024-01-01']),
+            ('2024-01-20', '2024-02-10', ['2024-01-31', '2024-01-20']),
+            ('2023-12-01', '2024-02-10', ['2024-01-31', '2024-01-20', '2024-01-10', '2024-01-01']),
+        ]
+        for start, end, expected_dates in cases:
+            with self.subTest(start=start, end=end):
+                count = self.service.export_csv(self.csv_path, month='2024-01', start=start, end=end)
+                with self.csv_path.open(encoding='utf-8', newline='') as stream:
+                    actual_dates = [row['date'] for row in csv.DictReader(stream)]
+                self.assertEqual(actual_dates, expected_dates)
+                self.assertEqual(count, len(expected_dates))
+
+    def test_export_disjoint_conditions_write_only_header(self):
+        self.seed(self.transaction('A', '2024-01-10'), self.transaction('B', '2024-02-10'))
+        count = self.service.export_csv(self.csv_path, month='2024-01', start='2024-02-01', end='2024-02-29')
+        self.assertEqual(count, 0)
+        self.assertEqual(self.csv_path.read_text().strip(), 'date,type,category,amount,memo,tags')
+
+    def test_export_month_intersection_includes_leap_day(self):
+        self.seed(self.transaction('A', '2024-02-28'), self.transaction('B', '2024-02-29'),
+                  self.transaction('C', '2024-03-01'))
+        count = self.service.export_csv(self.csv_path, month='2024-02', start='2024-02-29', end='2024-03-01')
+        with self.csv_path.open(encoding='utf-8', newline='') as stream:
+            dates = [row['date'] for row in csv.DictReader(stream)]
+        self.assertEqual((count, dates), (1, ['2024-02-29']))
+
+    def test_export_invalid_combined_condition_preserves_destination(self):
+        self.write('keep original')
+        for options in [
+            {'month': '2024-01', 'start': '2024-02-01', 'end': '2024-01-01'},
+            {'month': '2024-01', 'start': '2024-02-30', 'end': '2024-03-01'},
+            {'month': '2024-13', 'start': '2024-01-01', 'end': '2024-01-31'},
+            {'month': '2024-01', 'start': '2024-01-10'},
+        ]:
+            with self.subTest(options=options), self.assertRaises(ValidationError):
+                self.service.export_csv(self.csv_path, **options)
+            self.assertEqual(self.csv_path.read_text(), 'keep original')
+
+    def test_export_requires_at_least_one_complete_condition(self):
         for options in [{}, {'start': '2024-01-01'}, {'month': '2024-01', 'end': '2024-01-31'},
                         {'month': '2024-13'}, {'start': '2024-02-01', 'end': '2024-01-01'}]:
             with self.subTest(options=options), self.assertRaises(ValidationError):

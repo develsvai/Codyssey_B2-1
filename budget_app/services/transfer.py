@@ -47,15 +47,17 @@ class TransferService:
     @timed
     def export_csv(self, destination: str | Path, *, month: str | None = None,
                    start: str | None = None, end: str | None = None) -> int:
+        if (start is None) != (end is None):
+            raise ValidationError('기간의 시작일과 종료일이 모두 필요합니다.', '--from과 --to를 함께 지정하세요.')
+        if month is None and start is None:
+            raise ValidationError('내보낼 기간이 필요합니다.', '--month 또는 --from과 --to를 함께 지정하세요.')
+        date_filter = TransactionFilter(start=start, end=end)
+        month_filter = TransactionFilter()
         if month is not None:
-            if start is not None or end is not None:
-                raise ValidationError('월과 기간 조건을 동시에 지정했습니다.', '--month 또는 --from/--to 쌍 중 하나를 사용하세요.')
             valid_month(month)
             year, month_number = map(int, month.split('-'))
-            start, end = month + '-01', f'{month}-{calendar.monthrange(year, month_number)[1]:02d}'
-        elif start is None or end is None:
-            raise ValidationError('내보낼 기간이 필요합니다.', '--month 또는 --from과 --to를 함께 지정하세요.')
-        query = TransactionFilter(start=start, end=end)
+            month_filter = TransactionFilter(
+                start=month + '-01', end=f'{month}-{calendar.monthrange(year, month_number)[1]:02d}')
         path = Path(destination).expanduser().resolve()
         store = self.transactions.store
         protected = {store.path(name).resolve() for name in ('transactions', 'categories', 'budgets')}
@@ -63,4 +65,5 @@ class TransferService:
         if path in protected:
             raise ValidationError('저장 파일을 CSV로 덮어쓸 수 없습니다.', '별도의 .csv 출력 경로를 지정하세요.')
         with closing(self.transactions.iter_all()) as transactions:
-            return write_csv(path, (transaction for transaction in transactions if query.matches(transaction)))
+            return write_csv(path, (transaction for transaction in transactions
+                                   if date_filter.matches(transaction) and month_filter.matches(transaction)))

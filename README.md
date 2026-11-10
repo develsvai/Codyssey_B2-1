@@ -126,9 +126,13 @@ date,type,category,amount,memo,tags
 python3 -m budget_app import --from import.csv
 python3 -m budget_app export --out january.csv --month 2024-01
 python3 -m budget_app export --out period.csv --from 2024-01-01 --to 2024-02-15
+python3 -m budget_app export --out intersection.csv --month 2024-01 --from 2024-01-10 --to 2024-02-15
 ```
 
-- 내보내기는 **월 또는 시작일·종료일 쌍 중 하나만** 받습니다. 조건 생략과 혼용은 오류입니다.
+- 내보내기는 **월 또는 시작일·종료일 쌍 중 하나 이상**을 받습니다. 둘 다 지정하면 **교집합**을 내보냅니다.
+  위 intersection.csv 예시는 2024-01-10부터 2024-01-31까지를 포함합니다.
+  두 조건이 겹치지 않으면 정상 종료하며 헤더만 있는 CSV를 만듭니다.
+  조건 전체 생략, 시작일/종료일 중 하나만 지정, 잘못된 날짜나 역전된 기간은 오류입니다.
 - 내보내는 열 순서는 `date,type,category,amount,memo,tags`입니다. 대상 거래가 없어도 헤더 파일을 만듭니다.
 - 기존 출력 CSV는 정상 완료 시 교체합니다. 내부 저장 파일과 그 심볼릭 링크 대상은 출력 경로로 사용할 수 없습니다.
 - CSV 인용 규칙은 `csv` 모듈이 처리합니다. 쉼표·큰따옴표·줄바꿈이 들어간 메모도 보존합니다.
@@ -180,4 +184,4 @@ python3 -m unittest tests.test_architecture -v
 하향 의존성·순환 참조·표준 라이브러리만 사용 여부를 확인합니다.
 백업 명령, 반복 거래, 가변 폭 표 정렬은 선택 과제로 구현하지 않았습니다.
 
-Python 3.11과 3.14에서 전체 65개 테스트를 통과했습니다. [검증 기록](docs/validation.md)에 시나리오와 검증 범위를 정리했습니다.
+Python 3.11과 3.14에서 전체 70개 테스트를 통과했습니다. [검증 기록](docs/validation.md)에 시나리오와 검증 범위를 정리했습니다.
