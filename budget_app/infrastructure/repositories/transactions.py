@@ -1,13 +1,15 @@
 """날짜/ID 내림차순 JSONL 거래 저장소. 쓰기 호출자는 데이터 잠금을 잡는다."""
 
+import heapq
 from contextlib import closing
 from dataclasses import asdict
 from pathlib import Path
-from typing import Any, Iterator
+from typing import Any, Iterable, Iterator
 
 from budget_app.common.errors import ConflictError, NotFoundError, StorageError, ValidationError
 from budget_app.domain.models import Transaction
 from budget_app.infrastructure.data_directory import DataDirectory
+from budget_app.infrastructure.external_sort import external_sort
 from budget_app.infrastructure.jsonl_io import read_jsonl, write_jsonl
 
 
@@ -81,3 +83,28 @@ class TransactionRepository:
             if not found:
                 raise NotFoundError(f'없는 거래 ID: {identifier}', 'list로 ID를 확인하세요.')
         write_jsonl(self.path, records())
+
+    def insert_many(self, transactions: Iterable[Transaction]) -> int:
+        """새 UUID를 갖는 일괄 입력을 모두 검증·정렬한 뒤 한 번에 교체한다."""
+        count = 0
+        def incoming() -> Iterator[dict[str, Any]]:
+            nonlocal count
+            for transaction in transactions:
+                count += 1
+                yield asdict(transaction)
+
+        def key(row: dict[str, Any]) -> tuple[str, str]:
+            return row['date'], row['id']
+
+        def records() -> Iterator[dict[str, Any]]:
+            with closing(external_sort(incoming(), self.store.root, key)) as new_rows:
+                with closing(self.iter_all()) as old:
+                    existing = (asdict(transaction) for transaction in old)
+                    previous: tuple[str, str] | None = None
+                    for row in heapq.merge(existing, new_rows, key=key, reverse=True):
+                        if key(row) == previous:
+                            raise ConflictError('가져올 거래 ID가 중복됩니다.', '가져오기를 다시 시도하세요.')
+                        previous = key(row)
+                        yield row
+        write_jsonl(self.path, records())
+        return count
