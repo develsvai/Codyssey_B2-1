@@ -3,9 +3,9 @@
   "job_id": "job-20261110-055623-job-4a2fedd3",
   "title": "통합 검증·의존성 검사·README 완성",
   "description": "미션 시나리오와 하향 import/순환/CLI I/O 경계를 검증하고 필요한 결함을 수정한다. 실행/저장/CSV/구조를 README에 문서화한다.",
-  "status": "RUNNING",
+  "status": "DONE",
   "created_at": "2026-11-10T05:57:03+00:00",
-  "updated_at": "2026-11-10T06:13:44+00:00",
+  "updated_at": "2026-11-10T06:18:48+00:00",
   "order_index": 9,
   "assigned_agent": "codex",
   "depends_on": [
@@ -23,12 +23,24 @@
   "run_attempts": 0,
   "last_error": "",
   "commit_refs": [
-    "2515bd61545b87f3350f5b5f6b0bface820f34f5"
+    "2515bd61545b87f3350f5b5f6b0bface820f34f5",
+    "35faaf7bc5ae98f4422840d90de75ede80cc5d3c"
   ],
   "branch_name": "develop",
   "git_dirty": true,
-  "git_snapshot_captured_at": "2026-11-10T06:13:44+00:00",
-  "artifacts": [],
+  "git_snapshot_captured_at": "2026-11-10T06:18:48+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20261110-055703-readme-02037e2f/agent-events.jsonl",
+    ".loom/tasks/task-20261110-055703-readme-02037e2f/artifacts.json",
+    ".loom/tasks/task-20261110-055703-readme-02037e2f/context.md",
+    ".loom/tasks/task-20261110-055703-readme-02037e2f/decision.md",
+    ".loom/tasks/task-20261110-055703-readme-02037e2f/git-snapshot.json",
+    ".loom/tasks/task-20261110-055703-readme-02037e2f/logs.txt",
+    ".loom/tasks/task-20261110-055703-readme-02037e2f/previous-results.md",
+    ".loom/tasks/task-20261110-055703-readme-02037e2f/prompt.md",
+    ".loom/tasks/task-20261110-055703-readme-02037e2f/result.md",
+    ".loom/tasks/task-20261110-055703-readme-02037e2f/troubleshooting.md"
+  ],
   "source_proposal_id": "",
   "source_prompt": ""
 }

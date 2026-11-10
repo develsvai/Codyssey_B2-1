@@ -4,7 +4,7 @@
   "title": "통합 검증·의존성 검사·README 완성",
   "description": "미션 시나리오와 하향 import/순환/CLI I/O 경계를 검증하고 필요한 결함을 수정한다. 실행/저장/CSV/구조를 README에 문서화한다.",
   "created_at": "2026-11-10T05:57:03+00:00",
-  "updated_at": "2026-11-10T06:13:44+00:00",
+  "updated_at": "2026-11-10T06:18:48+00:00",
   "order_index": 9,
   "legacy_task_id": "task-20261110-055703-readme-02037e2f",
   "depends_on": [
@@ -19,7 +19,7 @@
   "memory_refs": [],
   "document_outputs": [],
   "document_output_exceptions": [],
-  "default_agent": "",
+  "default_agent": "codex",
   "context_policy_id": "",
   "executor_policy_id": "",
   "review_policy": "",
