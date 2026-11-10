@@ -2,9 +2,9 @@
   "id": "task-run-20261110-075131-task-def-20261110-075131-csv-export-c8215a64-2050b0ec",
   "job_run_id": "job-run-20261110-075131-job-20261110-055623-job-4a2fedd3-88e44c99",
   "task_definition_id": "task-def-20261110-075131-csv-export-c8215a64",
-  "status": "RUNNING",
+  "status": "DONE",
   "created_at": "2026-11-10T07:51:31+00:00",
-  "updated_at": "2026-11-10T07:51:31+00:00",
+  "updated_at": "2026-11-10T07:57:11+00:00",
   "legacy_task_id": "task-20261110-075131-csv-export-6a694fd1",
   "attempt": 1,
   "assigned_agent": "codex",
@@ -13,13 +13,29 @@
   "lease_expires_at": "",
   "queued_at": "",
   "started_at": "2026-11-10T07:51:31+00:00",
-  "completed_at": "",
+  "completed_at": "2026-11-10T07:57:11+00:00",
   "last_error": "",
-  "commit_refs": [],
-  "branch_name": "",
-  "git_dirty": false,
-  "git_snapshot_captured_at": "",
-  "artifacts": [],
-  "checkpoint_ids": [],
+  "commit_refs": [
+    "4006b8932979ef1e21d6ea5f9ca641146f525ee0",
+    "fe2b5eea958145c2725a2443e101582a8bb76a64"
+  ],
+  "branch_name": "develop",
+  "git_dirty": true,
+  "git_snapshot_captured_at": "2026-11-10T07:57:11+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20261110-075131-csv-export-6a694fd1/agent-events.jsonl",
+    ".loom/tasks/task-20261110-075131-csv-export-6a694fd1/artifacts.json",
+    ".loom/tasks/task-20261110-075131-csv-export-6a694fd1/context.md",
+    ".loom/tasks/task-20261110-075131-csv-export-6a694fd1/decision.md",
+    ".loom/tasks/task-20261110-075131-csv-export-6a694fd1/git-snapshot.json",
+    ".loom/tasks/task-20261110-075131-csv-export-6a694fd1/logs.txt",
+    ".loom/tasks/task-20261110-075131-csv-export-6a694fd1/previous-results.md",
+    ".loom/tasks/task-20261110-075131-csv-export-6a694fd1/prompt.md",
+    ".loom/tasks/task-20261110-075131-csv-export-6a694fd1/result.md",
+    ".loom/tasks/task-20261110-075131-csv-export-6a694fd1/troubleshooting.md"
+  ],
+  "checkpoint_ids": [
+    "checkpoint-20261110-075711-task-completed-csv-export-7bfdbd5e"
+  ],
   "review_required_reason": ""
 }
