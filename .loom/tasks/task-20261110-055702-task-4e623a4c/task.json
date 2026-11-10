@@ -3,11 +3,11 @@
   "job_id": "job-20261110-055623-job-4a2fedd3",
   "title": "카테고리 추가·조회·사용 중 삭제 방지 구현",
   "description": "등록·중복 방지·목록·삭제 서비스를 구현하고 거래에서 참조 중인 카테고리 삭제를 막는다.",
-  "status": "PENDING",
+  "status": "RUNNING",
   "created_at": "2026-11-10T05:57:02+00:00",
-  "updated_at": "2026-11-10T05:57:02+00:00",
+  "updated_at": "2026-11-10T06:03:15+00:00",
   "order_index": 3,
-  "assigned_agent": "",
+  "assigned_agent": "codex",
   "depends_on": [
     "task-20261110-055702-jsonl-26e90fe2"
   ],
@@ -22,10 +22,12 @@
   "document_output_exceptions": [],
   "run_attempts": 0,
   "last_error": "",
-  "commit_refs": [],
-  "branch_name": "",
-  "git_dirty": false,
-  "git_snapshot_captured_at": "",
+  "commit_refs": [
+    "628a359529dae00cf1e6d7f6dfdd0a4ab9a43913"
+  ],
+  "branch_name": "develop",
+  "git_dirty": true,
+  "git_snapshot_captured_at": "2026-11-10T06:03:15+00:00",
   "artifacts": [],
   "source_proposal_id": "",
   "source_prompt": ""
