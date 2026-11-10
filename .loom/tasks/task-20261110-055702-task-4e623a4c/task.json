@@ -3,9 +3,9 @@
   "job_id": "job-20261110-055623-job-4a2fedd3",
   "title": "카테고리 추가·조회·사용 중 삭제 방지 구현",
   "description": "등록·중복 방지·목록·삭제 서비스를 구현하고 거래에서 참조 중인 카테고리 삭제를 막는다.",
-  "status": "RUNNING",
+  "status": "DONE",
   "created_at": "2026-11-10T05:57:02+00:00",
-  "updated_at": "2026-11-10T06:03:15+00:00",
+  "updated_at": "2026-11-10T06:03:47+00:00",
   "order_index": 3,
   "assigned_agent": "codex",
   "depends_on": [
@@ -23,12 +23,24 @@
   "run_attempts": 0,
   "last_error": "",
   "commit_refs": [
-    "628a359529dae00cf1e6d7f6dfdd0a4ab9a43913"
+    "628a359529dae00cf1e6d7f6dfdd0a4ab9a43913",
+    "3bd574f7660e4c04c727bc9c88b00323dae0efa2"
   ],
   "branch_name": "develop",
   "git_dirty": true,
-  "git_snapshot_captured_at": "2026-11-10T06:03:15+00:00",
-  "artifacts": [],
+  "git_snapshot_captured_at": "2026-11-10T06:03:47+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20261110-055702-task-4e623a4c/agent-events.jsonl",
+    ".loom/tasks/task-20261110-055702-task-4e623a4c/artifacts.json",
+    ".loom/tasks/task-20261110-055702-task-4e623a4c/context.md",
+    ".loom/tasks/task-20261110-055702-task-4e623a4c/decision.md",
+    ".loom/tasks/task-20261110-055702-task-4e623a4c/git-snapshot.json",
+    ".loom/tasks/task-20261110-055702-task-4e623a4c/logs.txt",
+    ".loom/tasks/task-20261110-055702-task-4e623a4c/previous-results.md",
+    ".loom/tasks/task-20261110-055702-task-4e623a4c/prompt.md",
+    ".loom/tasks/task-20261110-055702-task-4e623a4c/result.md",
+    ".loom/tasks/task-20261110-055702-task-4e623a4c/troubleshooting.md"
+  ],
   "source_proposal_id": "",
   "source_prompt": ""
 }
