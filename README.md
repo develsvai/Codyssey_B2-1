@@ -185,3 +185,4 @@ python3 -m unittest tests.test_architecture -v
 백업 명령, 반복 거래, 가변 폭 표 정렬은 선택 과제로 구현하지 않았습니다.
 
 Python 3.11과 3.14에서 전체 70개 테스트를 통과했습니다. [검증 기록](docs/validation.md)에 시나리오와 검증 범위를 정리했습니다.
+평가 질문에 대한 발표용 답변, 코드 근거와 시연 절차는 [평가 항목별 구현 설명](docs/evaluation-answers.md)을 참고하세요.
