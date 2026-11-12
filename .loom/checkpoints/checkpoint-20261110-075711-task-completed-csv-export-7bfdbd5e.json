@@ -1,0 +1,19 @@
+{
+  "id": "checkpoint-20261110-075711-task-completed-csv-export-7bfdbd5e",
+  "created_at": "2026-11-10T07:57:11+00:00",
+  "reason": "Task completed: CSV export 월·기간 교집합 조건 구현 및 검증",
+  "summary": "CSV export 월·기간 교집합 조건 구현 및 검증 -> DONE @ develop/4006b8932979",
+  "job_id": "job-20261110-055623-job-4a2fedd3",
+  "task_id": "task-20261110-075131-csv-export-6a694fd1",
+  "commit_sha": "4006b8932979ef1e21d6ea5f9ca641146f525ee0",
+  "branch_name": "develop",
+  "dirty": true,
+  "staged_files": [],
+  "modified_files": [
+    ".loom/job-runs/job-run-20261110-075131-job-20261110-055623-job-4a2fedd3-88e44c99/job-run.json",
+    ".loom/task-definitions/task-def-20261110-075131-csv-export-c8215a64/task-definition.json"
+  ],
+  "untracked_files": [],
+  "snapshot_captured_at": "2026-11-10T07:57:11+00:00",
+  "rollback_strategy": "revert-or-branch"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "task-def-20261110-055702-task-def-9d46b14e",
+  "job_definition_id": "job-20261110-055623-job-4a2fedd3",
+  "title": "월 예산 설정·조회 구현",
+  "description": "월·양수 금액을 검증하고 월별 예산 설정·조회 서비스를 구현한다.",
+  "created_at": "2026-11-10T05:57:02+00:00",
+  "updated_at": "2026-11-10T06:05:36+00:00",
+  "order_index": 5,
+  "legacy_task_id": "task-20261110-055702-task-20e982db",
+  "depends_on": [
+    "task-def-20261110-055702-task-def-f58ce675"
+  ],
+  "expected_output": "예산 서비스와 테스트",
+  "done_condition": "월별 예산 저장·덮어쓰기·조회와 잘못된 입력 처리가 검증된다.",
+  "in_scope": "예산 서비스와 테스트",
+  "out_of_scope": "월별 집계 및 CLI",
+  "validation_hint": "python3 -m unittest tests.test_budgets -v",
+  "required_docs": [],
+  "memory_refs": [],
+  "document_outputs": [],
+  "document_output_exceptions": [],
+  "default_agent": "codex",
+  "context_policy_id": "",
+  "executor_policy_id": "",
+  "review_policy": "",
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

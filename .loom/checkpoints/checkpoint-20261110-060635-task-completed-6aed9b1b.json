@@ -1,0 +1,19 @@
+{
+  "id": "checkpoint-20261110-060635-task-completed-6aed9b1b",
+  "created_at": "2026-11-10T06:06:35+00:00",
+  "reason": "Task completed: 월별 요약·지출 순위·예산 초과 판정 구현",
+  "summary": "월별 요약·지출 순위·예산 초과 판정 구현 -> DONE @ develop/c1dba63dcf14",
+  "job_id": "job-20261110-055623-job-4a2fedd3",
+  "task_id": "task-20261110-055703-task-ce6b1801",
+  "commit_sha": "c1dba63dcf14e89e707cb1c5daa531f8a1c98724",
+  "branch_name": "develop",
+  "dirty": true,
+  "staged_files": [],
+  "modified_files": [
+    ".loom/job-runs/job-run-20261110-055813-job-20261110-055623-job-4a2fedd3-6d700c64/job-run.json",
+    ".loom/task-definitions/task-def-20261110-055703-task-def-1009c9f4/task-definition.json"
+  ],
+  "untracked_files": [],
+  "snapshot_captured_at": "2026-11-10T06:06:35+00:00",
+  "rollback_strategy": "revert-or-branch"
+}

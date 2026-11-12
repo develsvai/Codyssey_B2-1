@@ -1,0 +1,2 @@
+[2026-11-10T06:05:42+00:00] agent=codex task=task-20261110-055703-task-ce6b1801 Foreground task session started.
+[2026-11-10T06:06:35+00:00] agent=codex task=task-20261110-055703-task-ce6b1801 월별 수입·지출·잔액·카테고리 TOP N·예산 사용률과 초과 판정 구현. 산출물: services/reports.py, domain/reports.py, tests/test_reports.py. 검증: python3 -m unittest tests.test_reports -v 5개 통과.

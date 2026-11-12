@@ -1,0 +1,46 @@
+{
+  "id": "task-20261110-055702-task-648f5dd0",
+  "job_id": "job-20261110-055623-job-4a2fedd3",
+  "title": "거래 추가·수정·삭제·스트리밍 목록·검색 구현",
+  "description": "거래 서비스에서 카테고리와 입력을 검증하고 ID 기반 변경, 최신순 조회 및 모든 검색 조건을 지원한다.",
+  "status": "DONE",
+  "created_at": "2026-11-10T05:57:02+00:00",
+  "updated_at": "2026-11-10T06:05:20+00:00",
+  "order_index": 4,
+  "assigned_agent": "codex",
+  "depends_on": [
+    "task-20261110-055702-task-4e623a4c"
+  ],
+  "expected_output": "거래 서비스와 테스트",
+  "done_condition": "거래 CRUD, 없는 ID, 필터 조합, limit, 최신순 스트리밍 테스트 통과",
+  "in_scope": "거래 서비스, 검색 조건 모델, 테스트",
+  "out_of_scope": "CLI와 CSV 입출력",
+  "validation_hint": "python3 -m unittest tests.test_transactions -v",
+  "required_docs": [],
+  "memory_refs": [],
+  "document_outputs": [],
+  "document_output_exceptions": [],
+  "run_attempts": 0,
+  "last_error": "",
+  "commit_refs": [
+    "b94b09754cfd92147c6ebaf1423555c5ddb7a9da",
+    "b98451d2f6e8fda25505bd30f5a73f83e1410128"
+  ],
+  "branch_name": "develop",
+  "git_dirty": true,
+  "git_snapshot_captured_at": "2026-11-10T06:05:20+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20261110-055702-task-648f5dd0/agent-events.jsonl",
+    ".loom/tasks/task-20261110-055702-task-648f5dd0/artifacts.json",
+    ".loom/tasks/task-20261110-055702-task-648f5dd0/context.md",
+    ".loom/tasks/task-20261110-055702-task-648f5dd0/decision.md",
+    ".loom/tasks/task-20261110-055702-task-648f5dd0/git-snapshot.json",
+    ".loom/tasks/task-20261110-055702-task-648f5dd0/logs.txt",
+    ".loom/tasks/task-20261110-055702-task-648f5dd0/previous-results.md",
+    ".loom/tasks/task-20261110-055702-task-648f5dd0/prompt.md",
+    ".loom/tasks/task-20261110-055702-task-648f5dd0/result.md",
+    ".loom/tasks/task-20261110-055702-task-648f5dd0/troubleshooting.md"
+  ],
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

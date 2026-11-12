@@ -1,0 +1,46 @@
+{
+  "id": "task-20261110-055703-cli-71ecac94",
+  "job_id": "job-20261110-055623-job-4a2fedd3",
+  "title": "기능별 CLI 명령과 공통 입력·출력·오류 처리 구현",
+  "description": "객체 연결을 진입점에 두고 기능별 명령, 대화형 add/category, 옵션 update, help와 data-dir, 친절한 오류/종료 코드를 구현한다.",
+  "status": "DONE",
+  "created_at": "2026-11-10T05:57:03+00:00",
+  "updated_at": "2026-11-10T06:13:38+00:00",
+  "order_index": 8,
+  "assigned_agent": "codex",
+  "depends_on": [
+    "task-20261110-055703-csv-deaec22d"
+  ],
+  "expected_output": "실행 가능한 budget_app CLI와 CLI 테스트",
+  "done_condition": "모든 필수 명령과 help가 작동하고 정상 0/오류 비0 및 무스택트레이스가 검증된다.",
+  "in_scope": "CLI, 진입점, 공통 화면 처리, CLI 테스트",
+  "out_of_scope": "선택 과제인 백업·반복 내역",
+  "validation_hint": "python3 -m unittest tests.test_cli -v",
+  "required_docs": [],
+  "memory_refs": [],
+  "document_outputs": [],
+  "document_output_exceptions": [],
+  "run_attempts": 0,
+  "last_error": "",
+  "commit_refs": [
+    "62759a5eae461800e492a5dcdbe56b2b730444e6",
+    "073c34edd247afaf03563d0579b975c47a768c1e"
+  ],
+  "branch_name": "develop",
+  "git_dirty": true,
+  "git_snapshot_captured_at": "2026-11-10T06:13:38+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20261110-055703-cli-71ecac94/agent-events.jsonl",
+    ".loom/tasks/task-20261110-055703-cli-71ecac94/artifacts.json",
+    ".loom/tasks/task-20261110-055703-cli-71ecac94/context.md",
+    ".loom/tasks/task-20261110-055703-cli-71ecac94/decision.md",
+    ".loom/tasks/task-20261110-055703-cli-71ecac94/git-snapshot.json",
+    ".loom/tasks/task-20261110-055703-cli-71ecac94/logs.txt",
+    ".loom/tasks/task-20261110-055703-cli-71ecac94/previous-results.md",
+    ".loom/tasks/task-20261110-055703-cli-71ecac94/prompt.md",
+    ".loom/tasks/task-20261110-055703-cli-71ecac94/result.md",
+    ".loom/tasks/task-20261110-055703-cli-71ecac94/troubleshooting.md"
+  ],
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

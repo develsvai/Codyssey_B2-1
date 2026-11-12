@@ -1,0 +1,28 @@
+{
+  "id": "task-def-20261110-055702-task-def-f58ce675",
+  "job_definition_id": "job-20261110-055623-job-4a2fedd3",
+  "title": "거래 추가·수정·삭제·스트리밍 목록·검색 구현",
+  "description": "거래 서비스에서 카테고리와 입력을 검증하고 ID 기반 변경, 최신순 조회 및 모든 검색 조건을 지원한다.",
+  "created_at": "2026-11-10T05:57:02+00:00",
+  "updated_at": "2026-11-10T06:05:19+00:00",
+  "order_index": 4,
+  "legacy_task_id": "task-20261110-055702-task-648f5dd0",
+  "depends_on": [
+    "task-def-20261110-055702-task-def-1dd35d17"
+  ],
+  "expected_output": "거래 서비스와 테스트",
+  "done_condition": "거래 CRUD, 없는 ID, 필터 조합, limit, 최신순 스트리밍 테스트 통과",
+  "in_scope": "거래 서비스, 검색 조건 모델, 테스트",
+  "out_of_scope": "CLI와 CSV 입출력",
+  "validation_hint": "python3 -m unittest tests.test_transactions -v",
+  "required_docs": [],
+  "memory_refs": [],
+  "document_outputs": [],
+  "document_output_exceptions": [],
+  "default_agent": "codex",
+  "context_policy_id": "",
+  "executor_policy_id": "",
+  "review_policy": "",
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

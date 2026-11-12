@@ -1,0 +1,46 @@
+{
+  "id": "task-20261110-055703-csv-deaec22d",
+  "job_id": "job-20261110-055623-job-4a2fedd3",
+  "title": "CSV 가져오기·조건별 내보내기 구현",
+  "description": "CSV 파싱/직렬화는 하위 계층에 두고 서비스가 입력 검증·카테고리 확인·저장 절차를 조정한다. 실패 시 부분 반영하지 않는다.",
+  "status": "DONE",
+  "created_at": "2026-11-10T05:57:03+00:00",
+  "updated_at": "2026-11-10T06:09:08+00:00",
+  "order_index": 7,
+  "assigned_agent": "codex",
+  "depends_on": [
+    "task-20261110-055703-task-ce6b1801"
+  ],
+  "expected_output": "CSV I/O, transfer 서비스, 테스트",
+  "done_condition": "UTF-8 헤더 스키마, 쉼표 태그·메모, 기간/월 조건, 오류 시 원본 보존 검증 통과",
+  "in_scope": "CSV 읽기·쓰기, 입출력 서비스, 테스트",
+  "out_of_scope": "CLI",
+  "validation_hint": "python3 -m unittest tests.test_transfer -v",
+  "required_docs": [],
+  "memory_refs": [],
+  "document_outputs": [],
+  "document_output_exceptions": [],
+  "run_attempts": 0,
+  "last_error": "",
+  "commit_refs": [
+    "64b21f0ec0f1437a7360a579c459ec93e7bdc260",
+    "85f78797318b967f1547b769b1aa6c2c71a8c8c6"
+  ],
+  "branch_name": "develop",
+  "git_dirty": true,
+  "git_snapshot_captured_at": "2026-11-10T06:09:08+00:00",
+  "artifacts": [
+    ".loom/tasks/task-20261110-055703-csv-deaec22d/agent-events.jsonl",
+    ".loom/tasks/task-20261110-055703-csv-deaec22d/artifacts.json",
+    ".loom/tasks/task-20261110-055703-csv-deaec22d/context.md",
+    ".loom/tasks/task-20261110-055703-csv-deaec22d/decision.md",
+    ".loom/tasks/task-20261110-055703-csv-deaec22d/git-snapshot.json",
+    ".loom/tasks/task-20261110-055703-csv-deaec22d/logs.txt",
+    ".loom/tasks/task-20261110-055703-csv-deaec22d/previous-results.md",
+    ".loom/tasks/task-20261110-055703-csv-deaec22d/prompt.md",
+    ".loom/tasks/task-20261110-055703-csv-deaec22d/result.md",
+    ".loom/tasks/task-20261110-055703-csv-deaec22d/troubleshooting.md"
+  ],
+  "source_proposal_id": "",
+  "source_prompt": ""
+}

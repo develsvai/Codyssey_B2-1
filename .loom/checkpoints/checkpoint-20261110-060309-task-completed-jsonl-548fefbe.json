@@ -1,0 +1,19 @@
+{
+  "id": "checkpoint-20261110-060309-task-completed-jsonl-548fefbe",
+  "created_at": "2026-11-10T06:03:09+00:00",
+  "reason": "Task completed: 스트리밍 JSONL 저장소와 안전한 파일 교체 구현",
+  "summary": "스트리밍 JSONL 저장소와 안전한 파일 교체 구현 -> DONE @ develop/ec7dca6ecbf1",
+  "job_id": "job-20261110-055623-job-4a2fedd3",
+  "task_id": "task-20261110-055702-jsonl-26e90fe2",
+  "commit_sha": "ec7dca6ecbf19991860a6c6b742fdca13cf54c99",
+  "branch_name": "develop",
+  "dirty": true,
+  "staged_files": [],
+  "modified_files": [
+    ".loom/job-runs/job-run-20261110-055813-job-20261110-055623-job-4a2fedd3-6d700c64/job-run.json",
+    ".loom/task-definitions/task-def-20261110-055702-jsonl-40a8ead6/task-definition.json"
+  ],
+  "untracked_files": [],
+  "snapshot_captured_at": "2026-11-10T06:03:09+00:00",
+  "rollback_strategy": "revert-or-branch"
+}

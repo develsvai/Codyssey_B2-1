@@ -1,0 +1,31 @@
+{
+  "before": {
+    "available": true,
+    "branch_name": "develop",
+    "commit_sha": "64b21f0ec0f1437a7360a579c459ec93e7bdc260",
+    "dirty": true,
+    "staged_files": [],
+    "modified_files": [
+      ".loom/events.jsonl",
+      ".loom/job-runs/job-run-20261110-055813-job-20261110-055623-job-4a2fedd3-6d700c64/job-run.json",
+      ".loom/task-definitions/task-def-20261110-055703-csv-c891bba1/task-definition.json"
+    ],
+    "untracked_files": [
+      ".loom/task-runs/task-run-20261110-060641-task-def-20261110-055703-csv-c891bba1-b1600de9/"
+    ],
+    "captured_at": "2026-11-10T06:06:41+00:00"
+  },
+  "after": {
+    "available": true,
+    "branch_name": "develop",
+    "commit_sha": "85f78797318b967f1547b769b1aa6c2c71a8c8c6",
+    "dirty": true,
+    "staged_files": [],
+    "modified_files": [
+      ".loom/job-runs/job-run-20261110-055813-job-20261110-055623-job-4a2fedd3-6d700c64/job-run.json",
+      ".loom/task-definitions/task-def-20261110-055703-csv-c891bba1/task-definition.json"
+    ],
+    "untracked_files": [],
+    "captured_at": "2026-11-10T06:09:08+00:00"
+  }
+}

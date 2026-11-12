@@ -1,0 +1,19 @@
+{
+  "id": "checkpoint-20261110-060520-task-completed-365326f9",
+  "created_at": "2026-11-10T06:05:20+00:00",
+  "reason": "Task completed: 거래 추가·수정·삭제·스트리밍 목록·검색 구현",
+  "summary": "거래 추가·수정·삭제·스트리밍 목록·검색 구현 -> DONE @ develop/b98451d2f6e8",
+  "job_id": "job-20261110-055623-job-4a2fedd3",
+  "task_id": "task-20261110-055702-task-648f5dd0",
+  "commit_sha": "b98451d2f6e8fda25505bd30f5a73f83e1410128",
+  "branch_name": "develop",
+  "dirty": true,
+  "staged_files": [],
+  "modified_files": [
+    ".loom/job-runs/job-run-20261110-055813-job-20261110-055623-job-4a2fedd3-6d700c64/job-run.json",
+    ".loom/task-definitions/task-def-20261110-055702-task-def-f58ce675/task-definition.json"
+  ],
+  "untracked_files": [],
+  "snapshot_captured_at": "2026-11-10T06:05:20+00:00",
+  "rollback_strategy": "revert-or-branch"
+}
