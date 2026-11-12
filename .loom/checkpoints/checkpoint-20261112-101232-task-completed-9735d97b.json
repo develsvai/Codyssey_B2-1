@@ -1,0 +1,19 @@
+{
+  "id": "checkpoint-20261112-101232-task-completed-9735d97b",
+  "created_at": "2026-11-12T10:12:32+00:00",
+  "reason": "Task completed: 평가 항목별 구현 설명과 발표 답변 문서 작성",
+  "summary": "평가 항목별 구현 설명과 발표 답변 문서 작성 -> DONE @ develop/9fbcb5c29624",
+  "job_id": "job-20261110-055623-job-4a2fedd3",
+  "task_id": "task-20261112-100526-task-5b7d9742",
+  "commit_sha": "9fbcb5c29624864403b1de533a91176d1d30ad01",
+  "branch_name": "develop",
+  "dirty": true,
+  "staged_files": [],
+  "modified_files": [
+    ".loom/job-runs/job-run-20261112-100530-job-20261110-055623-job-4a2fedd3-5bc8c40a/job-run.json",
+    ".loom/task-definitions/task-def-20261112-100526-task-def-8d7de62e/task-definition.json"
+  ],
+  "untracked_files": [],
+  "snapshot_captured_at": "2026-11-12T10:12:32+00:00",
+  "rollback_strategy": "revert-or-branch"
+}
