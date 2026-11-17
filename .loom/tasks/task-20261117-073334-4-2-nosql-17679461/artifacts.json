@@ -1,40 +1,43 @@
 {
-  "status": "RUNNING",
+  "status": "DONE",
   "agent": "codex",
   "mode": "foreground",
   "execution_surface": "foreground",
   "task_run_id": "task-run-20261117-073334-task-def-20261117-073334-4-2-nosql-c1d72a67-03b66a2e",
-  "generated_at": "2026-11-17T07:33:34+00:00",
+  "generated_at": "2026-11-17T07:37:17+00:00",
   "artifacts": [
-    ".loom/tasks/task-20261117-073334-4-2-nosql-17679461/prompt.md",
-    ".loom/tasks/task-20261117-073334-4-2-nosql-17679461/context.md",
-    ".loom/tasks/task-20261117-073334-4-2-nosql-17679461/previous-results.md",
-    ".loom/tasks/task-20261117-073334-4-2-nosql-17679461/git-snapshot.json",
-    ".loom/tasks/task-20261117-073334-4-2-nosql-17679461/result.md",
-    ".loom/tasks/task-20261117-073334-4-2-nosql-17679461/decision.md",
-    ".loom/tasks/task-20261117-073334-4-2-nosql-17679461/troubleshooting.md",
-    ".loom/tasks/task-20261117-073334-4-2-nosql-17679461/logs.txt",
     ".loom/tasks/task-20261117-073334-4-2-nosql-17679461/agent-events.jsonl",
-    ".loom/tasks/task-20261117-073334-4-2-nosql-17679461/artifacts.json"
+    ".loom/tasks/task-20261117-073334-4-2-nosql-17679461/artifacts.json",
+    ".loom/tasks/task-20261117-073334-4-2-nosql-17679461/context.md",
+    ".loom/tasks/task-20261117-073334-4-2-nosql-17679461/decision.md",
+    ".loom/tasks/task-20261117-073334-4-2-nosql-17679461/git-snapshot.json",
+    ".loom/tasks/task-20261117-073334-4-2-nosql-17679461/logs.txt",
+    ".loom/tasks/task-20261117-073334-4-2-nosql-17679461/previous-results.md",
+    ".loom/tasks/task-20261117-073334-4-2-nosql-17679461/prompt.md",
+    ".loom/tasks/task-20261117-073334-4-2-nosql-17679461/result.md",
+    ".loom/tasks/task-20261117-073334-4-2-nosql-17679461/troubleshooting.md",
+    "docs/evaluation-answers.md"
   ],
   "artifact_groups": {
     "user_outputs": [
-      ".loom/tasks/task-20261117-073334-4-2-nosql-17679461/result.md",
       ".loom/tasks/task-20261117-073334-4-2-nosql-17679461/decision.md",
+      ".loom/tasks/task-20261117-073334-4-2-nosql-17679461/result.md",
       ".loom/tasks/task-20261117-073334-4-2-nosql-17679461/troubleshooting.md"
     ],
     "execution_inputs": [
-      ".loom/tasks/task-20261117-073334-4-2-nosql-17679461/prompt.md",
       ".loom/tasks/task-20261117-073334-4-2-nosql-17679461/context.md",
-      ".loom/tasks/task-20261117-073334-4-2-nosql-17679461/previous-results.md"
+      ".loom/tasks/task-20261117-073334-4-2-nosql-17679461/previous-results.md",
+      ".loom/tasks/task-20261117-073334-4-2-nosql-17679461/prompt.md"
     ],
     "execution_audit": [
-      ".loom/tasks/task-20261117-073334-4-2-nosql-17679461/git-snapshot.json",
-      ".loom/tasks/task-20261117-073334-4-2-nosql-17679461/logs.txt",
       ".loom/tasks/task-20261117-073334-4-2-nosql-17679461/agent-events.jsonl",
-      ".loom/tasks/task-20261117-073334-4-2-nosql-17679461/artifacts.json"
+      ".loom/tasks/task-20261117-073334-4-2-nosql-17679461/artifacts.json",
+      ".loom/tasks/task-20261117-073334-4-2-nosql-17679461/git-snapshot.json",
+      ".loom/tasks/task-20261117-073334-4-2-nosql-17679461/logs.txt"
     ],
-    "work_products": []
+    "work_products": [
+      "docs/evaluation-answers.md"
+    ]
   },
   "contract_snapshot": {
     "schema_version": 1,
@@ -59,5 +62,8 @@
         ]
       }
     ]
-  }
+  },
+  "document_outputs": [
+    "docs/evaluation-answers.md"
+  ]
 }

@@ -1,1 +1,2 @@
 {"id": "event-8e860f31edfc", "type": "foreground_session_started", "message": "Foreground task session started.", "created_at": "2026-11-17T07:33:34+00:00", "agent": "codex", "task_id": "task-20261117-073334-4-2-nosql-17679461"}
+{"id": "event-6b0a1d20f855", "type": "foreground_session_done", "message": "4-2를 문서형 NoSQL 검토 방향으로 개정하고 전체 읽기와 동시 메모리 보관의 차이를 쉬운 예제로 설명했다. 섹션 범위·문서 링크·예제 문법·코드 근거 및 메타데이터를 검증했다.", "created_at": "2026-11-17T07:37:17+00:00", "agent": "codex", "task_id": "task-20261117-073334-4-2-nosql-17679461"}
